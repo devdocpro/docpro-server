@@ -1,6 +1,6 @@
-const connection = require("../config/connection");
+const connection = require("../server/config/connection");
 const knex = require("knex")(connection);
-const { validateDiagnosa } = require("../validation/isValid");
+const { validateDiagnosa } = require("../server/validation/isValid");
 const moment = require("moment");
 
 exports.addNewDiagnosa = async (req, res) => {

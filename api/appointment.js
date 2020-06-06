@@ -1,10 +1,10 @@
-const connection = require("../config/connection");
+const connection = require("../server/config/connection");
 const knex = require("knex")(connection);
 const fs = require("fs");
 const path = require("path");
 const moment = require("moment");
 
-const { validateAppointment } = require("../validation/isValid");
+const { validateAppointment } = require("../server/validation/isValid");
 
 exports.newAppointment = async (req, res) => {
   if (!req.isAuth) return res.status(401).json({ message: "Unauthorization" });

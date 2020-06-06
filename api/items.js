@@ -1,7 +1,10 @@
-const connection = require("../config/connection");
+const connection = require("../server/config/connection");
 const knex = require("knex")(connection);
 
-const { validateDrug, validateService } = require("../validation/isValid");
+const {
+  validateDrug,
+  validateService,
+} = require("../server/validation/isValid");
 
 // Item Service --------------------------------------------------------------
 exports.addNewService = async (req, res) => {

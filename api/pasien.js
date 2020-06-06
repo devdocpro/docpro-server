@@ -1,9 +1,9 @@
-const connection = require("../config/connection");
+const connection = require("../server/config/connection");
 const knex = require("knex")(connection);
 const fs = require("fs");
 const path = require("path");
 const moment = require("moment");
-const { validatePasien } = require("../validation/isValid");
+const { validatePasien } = require("../server/validation/isValid");
 
 exports.addPasien = async (req, res) => {
   if (!req.isAuth) return res.status(401).json({ message: "Unauthorization" });

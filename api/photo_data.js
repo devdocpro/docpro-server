@@ -1,4 +1,4 @@
-const connection = require("../config/connection");
+const connection = require("../server/config/connection");
 const knex = require("knex")(connection);
 const fs = require("fs");
 const path = require("path");
