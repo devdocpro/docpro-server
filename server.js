@@ -65,7 +65,7 @@ app.use(bodyParser.json());
 app.use(setHeader);
 app.use(isAuth);
 
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
   return res.json({ message: "DocPro api version 1.0.0" });
 });
 
