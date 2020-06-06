@@ -4,9 +4,8 @@
   "description": "docpro rest api",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "backend": "nodemon server.js",
-    "dev": "concurrently \"npm run backend\" \"npm run start --prefix ../twitter\""
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "docpro",
   "license": "ISC",
