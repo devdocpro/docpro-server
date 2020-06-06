@@ -8,7 +8,7 @@ const {
   updateDokter,
   deleteDokter,
   getDataDokter,
-} = require("./server/api/dokter");
+} = require("./api/dokter");
 const {
   addPasien,
   updatePasien,
@@ -16,7 +16,7 @@ const {
   getAllPasien,
   getDetailsPasien,
   searchPasien,
-} = require("./server/api/pasien");
+} = require("./api/pasien");
 const {
   addNewService,
   deleteService,
@@ -28,17 +28,17 @@ const {
   detailDrug,
   deleteDrug,
   updateDrug,
-} = require("./server/api/items");
+} = require("./api/items");
 const {
   appointment,
   newAppointment,
   deleteAppointment,
   filterAppointment,
   getSingleAppointment,
-} = require("./server/api/appointment");
-const { addNewDiagnosa } = require("./server/api/diagnosa");
-const { getHitory } = require("./server/api/history");
-const { addNewPhotoData, deletePhotoData } = require("./server/api/photo_data");
+} = require("./api/appointment");
+const { addNewDiagnosa } = require("./api/diagnosa");
+const { getHitory } = require("./api/history");
+const { addNewPhotoData, deletePhotoData } = require("./api/photo_data");
 
 const {
   uploadPhotoDoctor,
@@ -68,6 +68,7 @@ app.use(isAuth);
 app.get("/", (req, res) => {
   return res.json({ message: "DocPro api version 1.0.0" });
 });
+app.use(express.static());
 
 const docProAPI = "/api/doc-pro/v1";
 
